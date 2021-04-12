@@ -1,6 +1,9 @@
 library(shiny)
+
 ui <- fluidPage(
-  textInput("dna", "Input DNA string"),
+  theme = bslib::bs_theme(bootswatch = "minty"),
+  titlePanel("The DNA APP!"),
+  textInput("dna", "Input DNA string:"),
   textOutput("dna_complement"),
   numericInput("length", "What's the length of the wanted random DNA sequence?",value = 0, min = 0),
   textOutput("dna_random"),
